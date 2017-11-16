@@ -1,5 +1,5 @@
 <?php
-class EasySQL
+class MySQLDatabase
 {
 	public $conn;
 	public $result;
@@ -14,7 +14,7 @@ class EasySQL
 		$dbnm = $d;
 
 		$this->conn = mysqli_connect($host, $user, $pass, $dbnm)
-			or die("Error connecting to SQL: " . mysqli_error($this->conn));
+			or die("Error connecting to SQL: " . mysqli_error($conn));
 	}
 
 	function __destruct()
